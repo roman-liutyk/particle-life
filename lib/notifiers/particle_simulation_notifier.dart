@@ -11,16 +11,14 @@ class ParticleSimulationNotifier extends ValueNotifier<List<Particle>> {
   }) : super([]);
   final ParticleSimulationParams params;
   final Random _random = Random();
-  final List<List<double>> _attraction = [];
+  late final List<List<double>> _attraction;
 
   void init() {
-    _attraction.addAll(
-      List.generate(
-        6,
-        (index) {
-          return List.generate(6, (index) => _random.nextDouble() * 2 - 1);
-        },
-      ),
+    _attraction = List.generate(
+      6,
+      (index) {
+        return List.generate(6, (index) => _random.nextDouble() * 2 - 1);
+      },
     );
 
     value = List.generate(
