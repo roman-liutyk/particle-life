@@ -1,3 +1,3 @@
-# particle_life
+# Particle Life
 
-A new Flutter project.
+![Alt text](/assets/img/preview.png "Particle Simulation Preview")
